@@ -1,0 +1,33 @@
+#
+# @lc app=leetcode id=731 lang=python3
+#
+# [731] My Calendar II
+#
+
+# @lc code=start
+class MyCalendarTwo:
+
+    def __init__(self):
+        self.calendar = SortedList()
+
+    def book(self, start: int, end: int) -> bool:
+        self.calendar.add((start,  1))
+        self.calendar.add((end, -1))
+
+        total = 0 
+
+        for i,j in self.calendar:
+            total += j 
+
+            if total == 3:
+                self.calendar.remove((start, 1))
+                self.calendar.remove((end, -1))
+                return False 
+        return True 
+
+# Your MyCalendarTwo object will be instantiated and called as such:
+# obj = MyCalendarTwo()
+# param_1 = obj.book(start,end)
+
+# @lc code=end
+
