@@ -1,5 +1,6 @@
 # LeetCode
 [LeetCode刷题記錄](https://leetcode.com/u/MiaSuen/)
+
 記錄自己這學期刷LeetCode的心路歷程、起承轉合。
 
 ## SQL
